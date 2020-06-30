@@ -1,11 +1,13 @@
-from tkinter import *
+from tkinter import Label,Button,Tk
 from random import randint
 
 root = Tk()
 root.title('Random Winner')
-
+win_label = Label(root)
 
 def pick():
+    global win_label
+    win_label.destroy()
     entries = ['John','Jack','Tom','Jerry']
     entries_set = set(entries)
     unique_entries = list(entries_set)
